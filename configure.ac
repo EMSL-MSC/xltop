@@ -93,7 +93,11 @@ AC_FUNC_STRTOD
 AC_CHECK_FUNCS([floor getcwd gethostname isascii memchr memmove memset socket strcasecmp strchr strcspn strdup strerror strstr strtol strtoul sysinfo])
 
 AC_CONFIG_HEADERS([config.h])
-AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_FILES([
+Makefile
+src/Makefile
+xltop.spec
+])
 AC_OUTPUT
 AC_MSG_RESULT([
         $PACKAGE $VERSION

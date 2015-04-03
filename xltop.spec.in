@@ -1,0 +1,37 @@
+Name:		@PACKAGE@
+Version:        @VERSION@
+Release:        1%{?dist}
+Summary:	Lustre Monitoring Tool
+
+Group:		System/Development
+License:	GPLv2
+URL:		https://github.com/jhammond/@PACKAGE@
+Source0:	@PACKAGE@-@VERSION@.tar.gz
+
+%description
+The organization of xltop is shown below and consists of a single
+master process (xltop-master), an ncurses based client (xltop),
+process(es) to push batch scheduler job mappings (xltop-clusd), and for
+each MDS/OSS a daemon (xltop-servd) to monitor Lustre export stats via
+/proc.
+
+%prep
+%setup -q
+
+
+%build
+%configure
+make %{?_smp_mflags}
+
+
+%install
+make install DESTDIR=%{buildroot}
+
+
+%files
+
+%doc
+
+
+
+%changelog
