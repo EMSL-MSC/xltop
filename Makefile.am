@@ -5,3 +5,5 @@ export XLTOP_CLUS = ${xltop_clus}
 export XLTOP_DOMAIN = ${xltop_domain}
 
 SUBDIRS = src
+
+EXTRA_DIST = xltop.spec

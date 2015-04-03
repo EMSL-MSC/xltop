@@ -8,6 +8,8 @@ License:	GPLv2
 URL:		https://github.com/jhammond/@PACKAGE@
 Source0:	@PACKAGE@-@VERSION@.tar.gz
 
+BuildRequires: curl-devel, ncurses-devel, libev-devel
+
 %description
 The organization of xltop is shown below and consists of a single
 master process (xltop-master), an ncurses based client (xltop),
