@@ -32,3 +32,5 @@ xltop_master_LDADD = -lconfuse -lev -lncurses
 xltop_servd_SOURCES = servd.c curl_x.c hash.c n_buf.c pidfile.c
 
 xltop_servd_LDADD = -lcurl -lev
+
+EXTRA_DIST = *.h
