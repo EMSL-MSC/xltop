@@ -421,9 +421,11 @@ have_conf_file:
   evx_listen_start(EV_DEFAULT_ &x_listen.bl_listen);
 
   if (want_daemon)
-    daemon(0, 0);
+    if (daemon(0, 0))
+		FATAL("Error Setting Deamon Mode: %s", strerror(errno));
   else
-    chdir("/");
+    if (chdir("/"))
+		FATAL("Error Setting Deamon Mode: %s", strerror(errno));
 
   if (pidfile_path != NULL) {
     pidfile_fd = pidfile_create(pidfile_path);
