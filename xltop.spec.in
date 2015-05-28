@@ -32,6 +32,10 @@ make install DESTDIR=%{buildroot}
 
 %files
 /usr/bin/xltop*
+/etc/rc.d/init.d/xltop*
+%config /etc/xltop/ranger-nids
+%config /etc/xltop/xltop-master.conf
+%config /etc/xltop/xltop-servd.conf
 
 %doc
 

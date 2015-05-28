@@ -31,7 +31,7 @@ log_warning_msg () {
 }
 
 prog=xltop-servd
-exec=/usr/local/bin/$prog
+exec=/usr/bin/$prog
 config=/etc/xltop/$prog.conf
 pidfile=/var/run/$prog.pid
 lockfile=/var/lock/subsys/$prog
